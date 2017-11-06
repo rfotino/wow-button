@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wow!</title>
+    <script type="text/javascript" src="wow.js"></script>
+    <style type="text/css">
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100%;
+      }
+      #button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        background-image: url(images/button.png);
+        background-position: 0 0;
+        width: 300px;
+        height: 300px;
+      }
+      #button:hover {
+        cursor: pointer;
+      }
+      #button:active {
+        background-position: 300px 0;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <a id="button"></a>
+  </body>
+</html>
