@@ -12,7 +12,10 @@ function init() {
       audio.removeEventListener('canplaythrough', callback);
     };
     audio.addEventListener('canplaythrough', callback);
-    audio.addEventListener('ended', () => playingSound = null);
+    audio.addEventListener('ended', () => {
+	console.log('ending ' + audio.src);
+	playingSound = null;
+    });
   }
 
   let playSound = () => {
@@ -33,7 +36,5 @@ function init() {
   };
 
   let btn = document.getElementById('button');
-  for (let event of ['mousedown', 'touchstart']) {
-    btn.addEventListener(event, playSound);
-  }
+  btn.addEventListener('click', playSound);
 }
