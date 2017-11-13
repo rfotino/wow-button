@@ -21,8 +21,8 @@ function init() {
   let playSound = () => {
     if (null !== playingSound) {
       console.log('stopping ' + playingSound.src);
-      playingSound.pause();
       playingSound.currentTime = 0;
+      playingSound.pause();
       playingSound = null;
     }
     if (0 == sounds.length) {
@@ -36,5 +36,7 @@ function init() {
   };
 
   let btn = document.getElementById('button');
-  btn.addEventListener('click', playSound);
+  for (let event of ['mousedown', 'touchstart']) {
+    btn.addEventListener(event, playSound);
+  }
 }
