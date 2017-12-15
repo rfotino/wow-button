@@ -2,7 +2,7 @@ function init() {
   let sounds = [];
   let prevIndex = -1;
 
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= 11; i++) {
     let audio = new Audio();
     let src = 'sounds/wow' + i + '.mp3';
     audio.src = src;
